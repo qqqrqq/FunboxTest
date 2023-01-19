@@ -1,0 +1,202 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Trebuchet-MS';
+    min-height: 100vh;
+    width: 100vw;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 5e-05) 49.88%, rgba(0, 0, 0, 0.5) 100%), url(../img/Pattern.png);
+}
+
+.wrapper {
+    h1 {
+        font-size: 36px;
+        line-height: 44px;
+        text-align: center;
+        color: #FFFFFF;
+        font-weight: 100;
+        font-family: 'Exo2.0';
+        text-shadow: 0px 1px 1px #000000;
+        margin-top: 36px;
+        display: block;
+    }
+
+    &__cards {
+        max-width: 1120px;
+        margin-top: 24px;
+        display: flex;
+        gap: 80px;
+
+        @media (max-width: 1205px) {
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+    }
+}
+
+
+
+
+.item {
+    width: 320px;
+    height: 480px;
+    background: linear-gradient(135deg, transparent 30px, #1698D9 0);
+    border-radius: 12px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__content {
+        border-radius: 12px;
+        width: 310px;
+        height: 470px;
+        background: linear-gradient(135deg, transparent 30px, #ffffff 0);
+        position: relative;
+        cursor: pointer;
+
+        img {
+            position: absolute;
+            left: 0;
+            bottom: 0px;
+        }
+    }
+
+    &__weight {
+        padding-top: 14px;
+        height: 80px;
+        width: 80px;
+        background: #1698D9;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 42px;
+        line-height: 22px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        color: #FFFFFF;
+        gap: 8px;
+
+        span:nth-child(2) {
+            font-size: 24px;
+        }
+    }
+
+    &__subname {
+        display: block;
+        padding: 21px 0 0 51px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #666666;
+
+    }
+
+    &__name {
+        padding: 0px 53px 0 48px;
+
+        span:nth-child(1) {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 48px;
+            color: #000000;
+            display: block;
+
+        }
+
+        span:nth-child(2) {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            color: #000000;
+        }
+
+    }
+
+    &__description {
+        padding-left: 48px;
+        margin-top: 11px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #666666;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+.target {
+    transition: 0.3s;
+    background: linear-gradient(135deg, transparent 30px, #D91667 0);
+
+    .item__weight {
+        transition: 0.3s;
+        background: #D91667;
+    }
+}
+.empty {
+    transition: 0.3s;
+    background: linear-gradient(135deg, transparent 30px, #B3B3B3 0);
+
+    .item__weight {
+        transition: 0.3s;
+        background: #B3B3B3;
+    }
+
+    .item__content {
+        img {
+            opacity: 0.5;
+        }
+
+        .item__description {
+            opacity: 0.3;
+        }
+
+        .item__subname {
+            opacity: 0.3;
+        }
+
+        .item__name {
+            opacity: 0.2;
+        }
+    }
+}
+
+
+.card {
+    &__action {
+
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 15px;
+        color: #FFFFFF;
+        margin-top: 14px;
+
+        button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #22A7E9;
+            border-bottom: 1px dashed #22A7E9;
+        }
+
+        p {
+            margin-left: 4px;
+            color: #22A7E9;
+        }
+    }
+}
